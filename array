@@ -1,0 +1,26 @@
+// Task 1: Function to process an array of numbers
+function processArray(numbers) {
+    return numbers.map(number => {
+        if (number % 2 === 0) {
+            return number * number; // Square the even numbers
+        } else {
+            return number * 3; // Triple the odd numbers
+        }
+    });
+}
+
+// Task 2: Function to format strings based on corresponding processed numbers
+function formatArrayStrings(strings, processedNumbers) {
+    return strings.map((str, index) => {
+        if (processedNumbers[index] % 2 === 0) {
+            return str.toUpperCase(); // Capitalize the string if number is even
+        } else {
+            return str.toLowerCase(); // Convert to lowercase if number is odd
+        }
+    });
+}
+
+// Exporting the functions for use in other files
+module.exports = { processArray, formatArrayStrings };
+git add arrayManipulation.js
+git commit -m "The formatArrayStrings function for Task 2"
